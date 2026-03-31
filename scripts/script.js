@@ -45,7 +45,7 @@ Dichiariamo chi ha vinto.*/
 
 // inserire numero 
 const scelta = prompt("pari o dispari?").toLowerCase(); // tutto minuscolo
-const operatore = parseInt(prompt("inserisci numero da 1 a 5"));
+const numero_utente = parseInt(prompt("inserisci numero da 1 a 5"));
 
 function numero_pc() {
   return Math.floor(Math.random() * 5) + 1; // arrotonda per difetto quindi diamo +1 per arrivare a 5
@@ -57,7 +57,7 @@ const numero = numero_pc();
 
 //somma numeri
 
-const totale = operatore + numero;
+const totale = numero_utente + numero;
 console.log("somma dei due numeri:", totale);
 
 // Stabiliamo se la somma dei due numeri è pari o dispari
@@ -77,7 +77,7 @@ function somma_numeri(totale) {
 
 let tot_somma_numeri = somma_numeri(totale);
 
-if (operatore === tot_somma_numeri) {
+if (scelta === tot_somma_numeri) {
     console.log("vinto utente");
     
 } else {
