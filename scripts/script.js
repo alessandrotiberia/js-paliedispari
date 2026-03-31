@@ -8,8 +8,33 @@ const utente = prompt("inserisci una parola");
 
 function palindroma(utente) {
     utente = utente.toLowerCase(); // testo in minuscolo
-    utente = utente.replace(/[^a-z]/g,''); // togli spazi punteggiatura numeri ecc valida solo dalla a alla z
+    utente = utente.replace(/[^a-z]/g, ''); // togli spazi punteggiatura numeri ecc valida solo dalla a alla z
+
+    let parola_invertita = ''; // contenitore dove inserire parole al contrario
+
+    for (let i = utente.length - 1; i >= 0; i--) {
+        parola_invertita = parola_invertita + utente[i];
+        // ogni giro prendi lettera e incolla nel contenitore vuoto di prima (parola_invertita) 
+    }
+
+    if (utente === parola_invertita) { // se parola inserita da utente è uguale a quella invertita restituisco TRUE
+        return true;
+    } else {
+        return false; // altrimenti restituisco false
+    }
 }
+
+const risultato = palindroma(utente); // risultato della funzione viene inserito nel risultato
+
+    if (risultato) {
+    console.log("è palidroma");
+
+    } else {
+    console.log("non è palindroma");
+
+}
+
+
 
 
 
