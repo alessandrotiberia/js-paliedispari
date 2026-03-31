@@ -36,19 +36,27 @@ const risultato = palindroma(utente); // risultato della funzione viene inserito
 
 
 
-
-
-
-
-
-
-
-
-
-
-//===================================================================================================================
+//===================================================================================================================//
 /* L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
+
+// inserire numero 
+const scelta = prompt("pari o dispari?").toLowerCase(); // tutto minuscolo
+const operatore = parseInt(prompt("inserisci numero da 1 a 5"));
+
+function numero_pc() {
+  return Math.floor(Math.random() * 5) + 1; // arrotonda per difetto quindi diamo +1 per arrivare a 5
+    //return restituisci
+}
+// numero prende numeropc della funzione
+const numero = numero_pc(); 
+
+
+//somma numeri
+
+const totale = operatore + numero;
+console.log("somma dei due numeri:", totale);
+
