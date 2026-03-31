@@ -60,3 +60,27 @@ const numero = numero_pc();
 const totale = operatore + numero;
 console.log("somma dei due numeri:", totale);
 
+// Stabiliamo se la somma dei due numeri è pari o dispari
+
+function somma_numeri(totale) {
+    // Se divido un numero per 2 e il resto è 0, allora il numero è pari.
+
+    // % modulo calcola il resto quindi se resto è 0 somma è pari
+    if (totale % 2 === 0) {
+        return "pari";
+        
+    } else {
+        return "dispari";
+        
+    }
+}
+
+let tot_somma_numeri = somma_numeri(totale);
+
+if (operatore === tot_somma_numeri) {
+    console.log("vinto utente");
+    
+} else {
+    console.log("vinto il pc");
+    
+}
